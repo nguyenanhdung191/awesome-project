@@ -35,6 +35,8 @@ import Menu, { MenuItem } from "material-ui/Menu";
 import FormControl from "material-ui/Form/FormControl";
 import Input from "material-ui/Input/Input";
 
+import Products from "./Products.js";
+
 const styles = {
     root: {
         width: "100%",
@@ -152,45 +154,6 @@ class TopBar extends React.Component {
         const open = Boolean(anchorEl);
 
         return (
-            //   <div class="topnav">
-            // <Toolbar>
-            //   <FormControl className="App-input-form">
-            //     <Input
-            //       type="text"
-            //       placeholder="Search"
-            //       color="inherit"
-            //       startAdornment={
-            //         <InputAdornment position="start">
-            //           <Search />
-            //         </InputAdornment>
-            //       }
-            //     />
-            //   </FormControl>
-
-            //   <div className="App-menu-btn">
-            //     <IconButton aria-haspopup="true" onClick={this.handleMenu}>
-            //       <MenuIcon style={{ fontSize: 30 }} />
-            //     </IconButton>
-            //     <Menu
-            //       id="menu-appbar"
-            //       anchorEl={anchorEl}
-            //       anchorOrigin={{
-            //         vertical: "top",
-            //         horizontal: "right"
-            //       }}
-            //       transformOrigin={{
-            //         vertical: "top",
-            //         horizontal: "right"
-            //       }}
-            //       open={open}
-            //       onClose={this.handleClose}
-            //     >
-            //       <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-            //       <MenuItem onClick={this.handleClose}>My account</MenuItem>
-            //     </Menu>
-            //   </div>
-            // </Toolbar>
-            //   </div>
             <div class="header-bar">
                 <Toolbar>
                     <FormControl className="App-input-form">
