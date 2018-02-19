@@ -62,6 +62,7 @@ class ProductDetail extends Component {
                                 label="Tồn kho"
                                 placeholder="Tồn kho"
                                 style={{ width: 300 }}
+                                className="eee"
                             />
                         </div>
                     </div>
