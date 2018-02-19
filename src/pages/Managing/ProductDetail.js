@@ -17,7 +17,7 @@ class ProductDetail extends Component {
         return (
             <div className={`product-detail-dialog-container ${(this.props.showed) ? " show" : " hide"}`} >
                 <div className="product-detail-dialog">
-                    <div className="product-detail-dialog-title"> -- Chi tiết hàng hóa --</div>
+                    <div className="product-detail-dialog-title">Chi tiết hàng hóa</div>
                     <div className="product-detail-dialog-content">
                         <div className="product-image-container">
                             <img alt="Chưa có hình" src="./images/1.png" className="product-image" />
