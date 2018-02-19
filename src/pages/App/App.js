@@ -12,6 +12,7 @@ import ReportIcon from "material-ui-icons/InsertChart";
 
 import Stock from "../Managing/Stock.js";
 import Transaction from "../Managing/Transaction.js";
+import Sale from "../Sale/Sale.js";
 
 
 import {
@@ -116,23 +117,28 @@ class App extends Component {
 								<ManagingIcon style={{ marginRight: 10 }} />
 								Quản lý
 								</Button>
-							<Button
-								variant="raised"
-								style={{
-									marginRight: 20,
-									width: 150,
-									color: "#FFFFFF",
-									backgroundColor: "#f44336"
-								}}>
-								<SaleIcon style={{ marginRight: 10 }} />
-								Bán hàng
+							<Link to="/sale">
+								<Button
+									variant="raised"
+									style={{
+										marginRight: 20,
+										width: 150,
+										color: "#FFFFFF",
+										backgroundColor: "#f44336"
+									}}>
+									<SaleIcon style={{ marginRight: 10 }} />
+									Bán hàng
 							</Button>
+							</Link>
+
 						</div>
 					</div>
 					<div className="body">
 						<Route exact path="/" component={Stock} />
 						<Route path="/stock" component={Stock} />
 						<Route path="/transaction" component={Transaction} />
+						<Route path="/sale" component={Sale} />
+
 					</div>
 				</div>
 			</BrowserRouter>

@@ -1,0 +1,141 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-input-form {
+    width: 30%;
+    margin-top: 5px !important;
+    color: #ffffff;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  .App-bar {
+    background-color: #e0e0e0;
+  }
+  
+  .App-Tabs {
+    width: 100%;
+    background-color: #e0e0e0;
+    max-height: 10px;
+  }
+  
+  .App-Tabs .App-Tab {
+    background-color: #ffffff;
+    width: inherit;
+    margin-right: 5px;
+    opacity: 1;
+    border: none;
+    overflow: "auto";
+  }
+  
+  .App-menu-btn {
+    position: absolute;
+    right: 0;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #2196f3;
+    height: 6vh;
+  }
+  
+  .App-Tabs .App-Plus {
+    background-color: #ffffff;
+  }
+  
+  .wrap-content {
+    display: flex;
+    background-color: #e0e0e0;
+    height: 93vh;
+  }
+  
+  .wrap-content .left-content {
+    background-color: #ffffff;
+    margin-right: 0.5%;
+    width: 74.5%;
+  }
+  
+  .wrap-content .right-content {
+    background-color: #ffffff;
+    width: 25%;
+  }
+  
+  .right-content .drawer {
+    width: 50%;
+  }
+  
+  /*  START - Products */
+  
+  .wrap-content .products-button {
+    position: fixed;
+    bottom: 4px;
+    left: 10px;
+  }
+  
+  .wrap-content .products-header {
+    display: flex;
+    height: auto;
+  }
+  
+  .wrap-content div.gallery {
+    margin-left: 10px;
+    border: 0.5px solid #ccc;
+    float: left;
+    width: 145px;
+  }
+  
+  .wrap-content div.gallery:hover {
+    border: 2px solid #ffffff;
+    cursor: pointer;
+  }
+  
+  .wrap-content div.gallery img {
+    width: 100%;
+    height: 110px;
+  }
+  
+  .wrap-content div.desc {
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+  }
+  
+  .item-total-price {
+    text-align: right;
+  }
+  
+  .item-price {
+    text-align: right;
+    width: 100%;
+  }
+  
+  /*  START - Products */
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
