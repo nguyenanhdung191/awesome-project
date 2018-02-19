@@ -154,7 +154,7 @@ class TopBar extends React.Component {
         const open = Boolean(anchorEl);
 
         return (
-            <div class="header-bar">
+            <div className="header-bar">
                 <Toolbar>
                     <FormControl className="App-input-form">
                         <Input
@@ -198,7 +198,6 @@ class TopBar extends React.Component {
 }
 
 const BillTab = (props) => {
-    console.log(props);
     return (
         <div>
             <List component="nav">
@@ -215,7 +214,7 @@ const BillTab = (props) => {
                         <Grid item xs={4}>
                             <ListItemText primary="Thịt Heo Lái A" />
                         </Grid>
-                        <Grid item xs={6.5} style={{ display: "flex" }}>
+                        <Grid item xs={6} style={{ display: "flex" }}>
 
                             <Input
                                 id="adornment-weight"
@@ -252,19 +251,15 @@ const BillTab = (props) => {
 }
 
 class LeftPager extends React.Component {
-    state = {
-        value: 0,
-        open: true,
-        listBills: [{
-            title: "Hóa đơn"
-        }]
-    };
-
-    handleDrawerToggle = () => {
-        this.setState(prevState => ({
-            open: !prevState.open
-        }));
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 0,
+            listBills: [{
+                title: "Hóa đơn"
+            }]
+        };
+    }
 
     handleChangeTab = (event, value) => {
         this.setState({
@@ -281,6 +276,10 @@ class LeftPager extends React.Component {
             listBills: this.state.listBills
         }));
     }
+
+    // componentDidMount() {
+    //     this.textInput.focusTextInput();
+    // }
 
     render() {
         const { styles } = this.props;
@@ -299,7 +298,7 @@ class LeftPager extends React.Component {
                     }}
                 >
                     {listBills.map((bill, idex) => (
-                        <Tab label={`${bill.title} ${idex + 1}`} className="App-Tab" />
+                        <Tab key={idex} label={`${bill.title} ${idex + 1}`} className="App-Tab" />
                     ))}
 
                     <Tab
@@ -315,55 +314,23 @@ class LeftPager extends React.Component {
 
                 {listBills.map((bill, idex) => {
                     return (
-                        <div>
+                        <div key={idex}>
                             {value === idex && <BillTab list > Bill {`${idex + 1}`}</BillTab>}
                         </div>
                     )
                 })}
 
+                <Products
+                    onRef={ref => (this.child = ref)}
+                >
+                </Products>
+
                 <IconButton
-                    onClick={this.handleDrawerToggle}
+                    onClick={() => this.child.handleDrawerToggle()}
                     className="products-button"
                 >
                     <KeyboardArrowUp />
                 </IconButton>
-
-                <Drawer
-                    variant="persistent"
-                    classes={{
-                        paper: styles.drawerPaper
-                    }}
-                    className="drawer"
-                    anchor="bottom"
-                    open={this.state.open}
-                >
-                    <GridList
-                        cellHeight={180}
-                        className={styles.gridList}
-                        cols={2.8}
-                        spacing={1}
-                    >
-                        <GridListTile key="Subheader" cols={2.8} style={{ height: "auto" }}>
-                            <div className="products-header">
-                                <IconButton onClick={this.handleDrawerToggle}>
-                                    <KeyboardArrowDown />
-                                </IconButton>
-                                <Subheader>Danh mục</Subheader>
-                            </div>
-                        </GridListTile>
-
-                        {listProducts.map(tile => (
-                            <GridListTile key={tile.img} cols={0.4}>
-                                <div className="gallery">
-                                    <img src={tile.img} alt={tile.title} />
-                                    <div className="desc">
-                                        Add a description of the image here
-                  </div>
-                                </div>
-                            </GridListTile>
-                        ))}
-                    </GridList>
-                </Drawer>
             </div>
         );
     }
@@ -376,8 +343,12 @@ class RightPager extends React.Component {
 }
 
 class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
-        console.log(this.props.classes);
         return (
             <Grid>
                 <TopBar props={this.props} />
