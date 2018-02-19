@@ -52,12 +52,6 @@
     right: 0;
   }
   
-  .topnav {
-    overflow: hidden;
-    background-color: #2196f3;
-    height: 6vh;
-  }
-  
   .App-Tabs .App-Plus {
     background-color: #ffffff;
   }
@@ -65,7 +59,7 @@
   .wrap-content {
     display: flex;
     background-color: #e0e0e0;
-    height: 93vh;
+    height: 95vh;
   }
   
   .wrap-content .left-content {
