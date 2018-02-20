@@ -1,88 +1,131 @@
 .App {
-    text-align: center;
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-input-form {
+  width: 30%;
+  margin-top: 5px !important;
+  color: #ffffff;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-bar {
+  background-color: #e0e0e0;
+}
+
+.App-Tabs {
+  width: 100%;
+  background-color: #e0e0e0;
+  max-height: 10px;
+}
+
+.App-Tabs .App-Tab {
+  background-color: #ffffff;
+  width: inherit;
+  margin-right: 5px;
+  opacity: 1;
+  border: none;
+  overflow: "auto";
+}
+
+.App-menu-btn {
+  position: absolute;
+  right: 0;
+}
+
+.App-Tabs .App-Plus {
+  background-color: #ffffff;
+}
+
+.wrap-content {
+  display: flex;
+  background-color: #e0e0e0;
+  height: 95vh;
+}
+
+.wrap-content .left-content {
+  background-color: #ffffff;
+  margin-right: 0.5%;
+  width: 74.5%;
+}
+
+.wrap-content .right-content {
+  background-color: #ffffff;
+  width: 25%;
+}
+
+.right-content .drawer {
+  width: 50%;
+}
+
+.shopping-cart {
+  width: 100%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top: 1px solid #E1E8EE;
+  border-bottom: 1px solid #E1E8EE;
+}
+
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.delete-btn, .like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+
+.delete-btn {
+  width: 18px;
+  height: 17px;
+}
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-  }
-  
-  .App-title {
-    font-size: 1.5em;
-  }
-  
-  .App-input-form {
-    width: 30%;
-    margin-top: 5px !important;
-    color: #ffffff;
-  }
-  
-  .App-intro {
-    font-size: large;
-  }
-  
-  .App-bar {
-    background-color: #e0e0e0;
-  }
-  
-  .App-Tabs {
-    width: 100%;
-    background-color: #e0e0e0;
-    max-height: 10px;
-  }
-  
-  .App-Tabs .App-Tab {
-    background-color: #ffffff;
-    width: inherit;
-    margin-right: 5px;
-    opacity: 1;
-    border: none;
-    overflow: "auto";
-  }
-  
-  .App-menu-btn {
-    position: absolute;
-    right: 0;
-  }
-  
-  .App-Tabs .App-Plus {
-    background-color: #ffffff;
-  }
-  
-  .wrap-content {
-    display: flex;
-    background-color: #e0e0e0;
-    height: 95vh;
-  }
-  
-  .wrap-content .left-content {
-    background-color: #ffffff;
-    margin-right: 0.5%;
-    width: 74.5%;
-  }
-  
-  .wrap-content .right-content {
-    background-color: #ffffff;
-    width: 25%;
-  }
-  
-  .right-content .drawer {
-    width: 50%;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
+}

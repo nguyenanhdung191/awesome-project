@@ -199,8 +199,8 @@ class TopBar extends React.Component {
 
 const BillTab = (props) => {
     return (
-        <div>
-            <List component="nav">
+        <div className="shopping-cart">
+            {/* <List component="nav">
                 <ListItem divider>
                     <Grid container>
                         <Grid item xs={0.5}>
@@ -245,7 +245,35 @@ const BillTab = (props) => {
 
                     </Grid>
                 </ListItem>
-            </List>
+            </List> */}
+            <div className="item">
+                <div className="buttons">
+                    <span className="delete-btn">
+                        <Clear />
+                    </span>
+                </div>
+
+                <div className="image">
+                    <img src="item-1.png" alt="" />
+                </div>
+
+                <div className="description">
+                    <span>Common Projects</span>
+                    <span>Bball High</span>
+                    <span>White</span>
+                </div>
+
+                <div className="quantity">
+                    <button className="plus-btn" type="button" name="button">
+                        <img src="plus.svg" alt="" />
+                    </button>
+                    <input type="text" name="name" value="1" />
+                    <button className="minus-btn" type="button" name="button">
+                        <img src="minus.svg" alt="" />
+                    </button>
+                </div>
+                <div className="total-price">$549</div>
+            </div>
         </div>
     )
 }
