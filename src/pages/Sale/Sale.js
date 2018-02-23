@@ -272,6 +272,40 @@ const BillTab = (props) => {
                         <img src="minus.svg" alt="" />
                     </button>
                 </div>
+                <div className="price">
+                    <input type="text" name="name" value="1" />
+                </div>
+                <div className="total-price">$549</div>
+            </div>
+            <div className="item">
+                <div className="buttons">
+                    <span className="delete-btn">
+                        <Clear />
+                    </span>
+                </div>
+
+                <div className="image">
+                    <img src="item-1.png" alt="" />
+                </div>
+
+                <div className="description">
+                    <span>Common Projects</span>
+                    <span>Bball High</span>
+                    <span>White</span>
+                </div>
+
+                <div className="quantity">
+                    <button className="plus-btn" type="button" name="button">
+                        <img src="plus.svg" alt="" />
+                    </button>
+                    <input type="text" name="name" value="1" />
+                    <button className="minus-btn" type="button" name="button">
+                        <img src="minus.svg" alt="" />
+                    </button>
+                </div>
+                <div className="price">
+                    <input type="text" name="name" value="1" />
+                </div>
                 <div className="total-price">$549</div>
             </div>
         </div>
