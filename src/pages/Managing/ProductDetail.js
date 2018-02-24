@@ -20,7 +20,7 @@ class ProductDetail extends Component {
                     <div className="product-detail-dialog-title">Chi tiết hàng hóa</div>
                     <div className="product-detail-dialog-content">
                         <div className="product-image-container">
-                            <img alt="Chưa có hình" src="./images/1.png" className="product-image" />
+                            <img alt="Chưa có hình" src="../images/1.png" className="product-image" />
                         </div>
                         <div className="product-fields-container">
                             <TextField
