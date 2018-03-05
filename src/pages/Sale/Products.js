@@ -167,22 +167,22 @@ class Products extends React.Component {
 
                 <div className="products-content">
                     <div className="product-item">
-                        <img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" />
-                        <div class="container">
+                        <img src="https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg" alt="Forest" />
+                        <div className="container">
                             <span className="product-price">1.800.800</span><br />
                             <span className="product-name">Thịt heo lái A</span>
                         </div>
                     </div>
                     <div className="product-item">
-                        <img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" />
-                        <div class="container">
+                        <img src="https://i.ytimg.com/vi/mEBFswpYms4/maxresdefault.jpg" alt="Forest" />
+                        <div className="container">
                             <span className="product-price">1.800.800</span><br />
                             <span className="product-name">Thịt heo lái A</span>
                         </div>
                     </div>
                     <div className="product-item">
-                        <img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" />
-                        <div class="container">
+                        <img src="https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Forest" />
+                        <div className="container">
                             <span className="product-price">1.800.800</span><br />
                             <span className="product-name">Thịt heo lái A</span>
                         </div>

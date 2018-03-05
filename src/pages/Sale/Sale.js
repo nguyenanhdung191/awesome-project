@@ -8,27 +8,21 @@ import {
     InputAdornment,
     IconButton,
     TextField,
-    Tabs,
-    Tab,
+    Tabs, Tab,
     Drawer,
     Divider,
-    GridList,
-    GridListTile,
-    List,
-    ListItem,
-    ListItemText,
-    ListItemIcon,
+    GridList, GridListTile,
+    List, ListItem, ListItemText, ListItemIcon,
     withStyles,
     colors
 } from "material-ui";
 import Subheader from "material-ui/List/ListSubheader";
 import {
-    ArrowDropUp,
-    ArrowDropDown,
+    Add, Remove,
+    ArrowDropUp, ArrowDropDown,
     Clear,
     Search,
-    KeyboardArrowDown,
-    KeyboardArrowUp
+    KeyboardArrowDown, KeyboardArrowUp
 } from "material-ui-icons";
 import MenuIcon from "material-ui-icons/Menu";
 import Menu, { MenuItem } from "material-ui/Menu";
@@ -66,69 +60,6 @@ const styles = {
         height: 200
     }
 };
-
-const listProducts = [
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/mushroom.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/mushroom.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/mushroom.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/mushroom.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    },
-    {
-        img: "https://material-ui-next.com/static/images/grid-list/plant.jpg",
-        title: "Image",
-        author: "author",
-        price: "600.000"
-    }
-];
 
 class TopBar extends React.Component {
     state = {
@@ -200,114 +131,37 @@ class TopBar extends React.Component {
 const BillTab = (props) => {
     return (
         <div className="shopping-cart">
-            {/* <List component="nav">
-                <ListItem divider>
-                    <Grid container>
-                        <Grid item xs={0.5}>
-                            <ListItemIcon>
-                                <Clear />
-                            </ListItemIcon>
-                        </Grid>
-                        <Grid item xs={0.5}>
-                            <ListItemText primary="1" />
-                        </Grid>
-                        <Grid item xs={4}>
-                            <ListItemText primary="Thịt Heo Lái A" />
-                        </Grid>
-                        <Grid item xs={6} style={{ display: "flex" }}>
 
-                            <Input
-                                id="adornment-weight"
-                                // value={this.state.weight}
-                                // onChange={this.handleChange('weight')}
-                                startAdornment={<InputAdornment position="start">
-                                    <IconButton>
-                                        <ArrowDropUp />
-                                    </IconButton>
-                                </InputAdornment>}
-                                endAdornment={<InputAdornment position="end">
-                                    <IconButton>
-                                        <ArrowDropDown />
-                                    </IconButton>
-                                </InputAdornment>}
-                            />
+            <div className="shopping-list">
 
-                            <Input style={{ flex: 1 }}
-                                id="adornment-weight"
-                            // value={this.state.weight}
-                            // onChange={this.handleChange('weight')} 
-                            />
+                <div className="item">
+                    <div className="cell-order">1</div>
+                    <div className="cell-action"><Clear /></div>
 
-                            <ListItemText primary="1,500,000" />
+                    <div className="row-product">
 
+                        {/* <div className="description">
+                            <span>Common Projects Common Projects</span>
+                        </div>
 
-                        </Grid>
-
-                    </Grid>
-                </ListItem>
-            </List> */}
-            <div className="item">
-                <div className="buttons">
-                    <span className="delete-btn">
-                        <Clear />
-                    </span>
+                        <div className="quantity">
+                            <button className="plus-btn" type="button" name="button">
+                                <Add style={{ width: "18px" }} />
+                            </button>
+                            <input type="text" name="name" value="1" />
+                            <button className="plus-btn" type="button" name="button">
+                                <Remove style={{ width: "18px" }} />
+                            </button>
+                        </div>
+                        <div className="price">
+                            <input type="text" name="name" />
+                        </div>
+                        <div className="total-price">$549</div> */}
+                    </div>
                 </div>
-
-                <div className="image">
-                    <img src="item-1.png" alt="" />
-                </div>
-
-                <div className="description">
-                    <span>Common Projects</span>
-                    <span>Bball High</span>
-                    <span>White</span>
-                </div>
-
-                <div className="quantity">
-                    <button className="plus-btn" type="button" name="button">
-                        <img src="plus.svg" alt="" />
-                    </button>
-                    <input type="text" name="name" value="1" />
-                    <button className="minus-btn" type="button" name="button">
-                        <img src="minus.svg" alt="" />
-                    </button>
-                </div>
-                <div className="price">
-                    <input type="text" name="name" value="1" />
-                </div>
-                <div className="total-price">$549</div>
             </div>
-            <div className="item">
-                <div className="buttons">
-                    <span className="delete-btn">
-                        <Clear />
-                    </span>
-                </div>
 
-                <div className="image">
-                    <img src="item-1.png" alt="" />
-                </div>
 
-                <div className="description">
-                    <span>Common Projects</span>
-                    <span>Bball High</span>
-                    <span>White</span>
-                </div>
-
-                <div className="quantity">
-                    <button className="plus-btn" type="button" name="button">
-                        <img src="plus.svg" alt="" />
-                    </button>
-                    <input type="text" name="name" value="1" />
-                    <button className="minus-btn" type="button" name="button">
-                        <img src="minus.svg" alt="" />
-                    </button>
-                </div>
-                <div className="price">
-                    <input type="text" name="name" value="1" />
-                </div>
-                <div className="total-price">$549</div>
-            </div>
         </div>
     )
 }

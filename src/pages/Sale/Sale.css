@@ -1,232 +1,259 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-input-form {
-  width: 30%;
-  margin-top: 5px !important;
-  color: #ffffff;
+    width: 30%;
+    margin-top: 5px !important;
+    color: #ffffff;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 .App-bar {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
 
 .App-Tabs {
-  width: 100%;
-  background-color: #e0e0e0;
-  max-height: 10px;
+    width: 100%;
+    background-color: #e0e0e0;
+    max-height: 10px;
 }
 
 .App-Tabs .App-Tab {
-  background-color: #ffffff;
-  width: inherit;
-  margin-right: 5px;
-  opacity: 1;
-  border: none;
-  overflow: "auto";
+    background-color: #ffffff;
+    width: inherit;
+    margin-right: 5px;
+    opacity: 1;
+    border: none;
+    overflow: "auto";
 }
 
 .App-menu-btn {
-  position: absolute;
-  right: 0;
+    position: absolute;
+    right: 0;
 }
 
 .App-Tabs .App-Plus {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .wrap-content {
-  display: flex;
-  background-color: #e0e0e0;
-  height: 95vh;
+    display: flex;
+    background-color: #e0e0e0;
+    height: 95vh;
 }
 
 .wrap-content .left-content {
-  background-color: #ffffff;
-  margin-right: 0.5%;
-  width: 74.5%;
+    background-color: #ffffff;
+    margin-right: 0.5%;
+    width: 74.5%;
 }
 
 .wrap-content .right-content {
-  background-color: #ffffff;
-  width: 25%;
+    background-color: #ffffff;
+    width: 25%;
+    min-width: 20%;
 }
 
 .right-content .drawer {
-  width: 50%;
+    width: 50%;
 }
 
+
+/* CART */
+
 .shopping-cart {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    background-color: #ffffff;
+    transition: height 200ms ease-out;
+    padding: 10px 12px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 4px;
+}
+
+.shopping-list {
+  box-sizing: border-box;
 }
 
 .item {
-  padding: 0 30px;
-  display: flex;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px;
+    font-size: 12px;
 }
 
-.item:nth-child(3) {
-  border-top: 1px solid #E1E8EE;
-  border-bottom: 1px solid #E1E8EE;
+.item .cell-order {
+    width: 35px;
 }
+
+.item .cell-action {
+    width: 35px;
+}
+
+.item .cell-action .btn-icon {
+    width: 35px;
+}
+
+.item>[class^="cell-"] {
+    padding: 15px 15px 0;
+    float: left;
+    text-align: center;
+}
+
+.item .row-product {
+    float: left;
+    position: relative;
+    padding-left: 120px;
+}
+
+
+/* TODO */
 
 .buttons {
-  position: relative;
-  padding-top: 30px;
-  flex-grow: 1
+    position: relative;
+    padding-top: 30px;
+    flex-grow: 1
 }
 
 .delete-btn,
 .like-btn {
-  display: inline-block;
-  Cursor: pointer;
+    display: inline-block;
+    Cursor: pointer;
 }
 
 .delete-btn {
-  width: 18px;
-  height: 17px;
+    width: 18px;
+    height: 17px;
 }
 
 .description {
-  padding-top: 10px;
-  margin-right: 60px;
-  width: 115px;
-  flex-grow: 4
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
 }
 
 .description span {
-  display: block;
-  font-size: 14px;
-  color: #43484D;
-  font-weight: 400;
-}
-
-.description span:first-child {
-  margin-bottom: 5px;
-}
-
-.description span:last-child {
-  font-weight: 300;
-  margin-top: 8px;
-  color: #86939E;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
 }
 
 .quantity {
-  padding-top: 20px;
-  margin-right: 60px;
-  flex-grow: 2
+    padding-top: 20px;
 }
 
 .quantity input {
-  -webkit-appearance: none;
-  border: none;
-  text-align: center;
-  width: 32px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
 }
 
 .price {
-  padding-top: 20px;
-  margin-right: 60px;
-  flex-grow: 2
+    padding-top: 20px;
 }
 
 .price input {
-  -webkit-appearance: none;
-  text-align: center;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-bottom-color: #e1e1e1;
+    background-color: transparent;
+    border-radius: 0;
+    width: 100%;
+    border-color: #a0a0a0;
+    padding: 0 0 1px;
+    text-align: right;
+    color: #111111;
 }
 
 button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
 }
 
-.minus-btn img {
-  margin-bottom: 3px;
+.plus-btn {
+    color: #868F9E;
 }
 
-.plus-btn img {
-  margin-top: 2px;
+;
+.minus-btn {
+    color: #868F9E;
 }
 
+;
 button:focus,
 input:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .total-price {
-  width: 83px;
-  padding-top: 27px;
-  text-align: center;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-  flex-grow: 1;
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
 }
 
 @media (max-width: 800px) {
-  .shopping-cart {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  .item {
-    height: auto;
-    flex-flow: wrap;
-    justify-content: center;
-  }
-  .image img {
-    width: 50%;
-  }
-  .image,
-  .quantity,
-  .description {
-    width: 100%;
-    text-align: center;
-    margin: 6px 0;
-  }
-  .buttons {
-    margin-right: 20px;
-  }
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .item {
+        height: auto;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    .image img {
+        width: 50%;
+    }
+    .image,
+    .buttons,
+    .quantity,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+    .buttons {
+        margin-right: 20px;
+    }
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
