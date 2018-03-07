@@ -132,32 +132,32 @@ const BillTab = (props) => {
     return (
         <div className="shopping-cart">
 
-            <div className="shopping-list">
 
-                <div className="item">
-                    <div className="cell-order">1</div>
-                    <div className="cell-action"><Clear /></div>
 
-                    <div className="row-product">
+            <div className="item">
+                <div className="cell-order">1</div>
+                <div className="cell-action"><Clear style={{ width: 14, height: 14 }} /></div>
 
-                        {/* <div className="description">
-                            <span>Common Projects Common Projects</span>
-                        </div>
+                <div className="row-product">
 
-                        <div className="quantity">
-                            <button className="plus-btn" type="button" name="button">
-                                <Add style={{ width: "18px" }} />
-                            </button>
-                            <input type="text" name="name" value="1" />
-                            <button className="plus-btn" type="button" name="button">
-                                <Remove style={{ width: "18px" }} />
-                            </button>
-                        </div>
-                        <div className="price">
-                            <input type="text" name="name" />
-                        </div>
-                        <div className="total-price">$549</div> */}
+                    <div className="cell-name">
+                        <h4>Common Projects Common Projects</h4>
+                        <div className="cell-code" title="SP000004">SP000004</div>
                     </div>
+
+                    <div className="cell-quantity">
+                        <button className="plus-btn" type="button" name="button">
+                            <Add style={{ width: 14, height: 14 }} />
+                        </button>
+                        <input type="text" name="name" value="1" />
+                        <button className="minus-btn" type="button" name="button">
+                            <Remove style={{ width: 14, height: 14 }} />
+                        </button>
+                    </div>
+                    {/* <div className="price">
+                        <input type="text" name="name" />
+                    </div>
+                    <div className="total-price">$549</div> */}
                 </div>
             </div>
 
@@ -230,9 +230,9 @@ class LeftPager extends React.Component {
 
                 {listBills.map((bill, idex) => {
                     return (
-                        <div key={idex}>
+                        <span key={idex}>
                             {value === idex && <BillTab list > Bill {`${idex + 1}`}</BillTab>}
-                        </div>
+                        </span>
                     )
                 })}
 

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .App {
     text-align: center;
 }
@@ -86,20 +90,27 @@
     transition: height 200ms ease-out;
     padding: 10px 12px 20px;
     border-bottom: 1px solid #e1e1e1;
-    height: 100%;
+    height: calc(100% - 300px);
+    ;
     overflow-x: hidden;
     overflow-y: scroll;
     padding-right: 4px;
 }
 
 .shopping-list {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .item {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 5px;
     font-size: 12px;
+    height: 50px;
+    background-color: #edf6e4;
+}
+
+.item:nth-child(even) {
+    background-color: #fafafa;
 }
 
 .item .cell-order {
@@ -115,7 +126,7 @@
 }
 
 .item>[class^="cell-"] {
-    padding: 15px 15px 0;
+    padding: 15px 5px 0;
     float: left;
     text-align: center;
 }
@@ -125,6 +136,68 @@
     position: relative;
     padding-left: 120px;
 }
+
+.item>.row-product {
+    margin-top: 15px;
+}
+
+.item .cell-name h4 {
+    font-size: 13px;
+    padding-bottom: 2px;
+    margin: 0;
+    color: #111111;
+    font-weight: normal;
+}
+
+.item .cell-code {
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.item>.row-product>[class^="cell-"] {
+    padding: 0 5px;
+    float: left;
+    min-height: 1px;
+}
+
+.item .cell-quantity {
+    width: 115px;
+    padding-left: 30px !important;
+    padding-right: 34px !important;
+    position: relative;
+}
+
+.item .cell-quantity input {
+    border-width: 0 0 1px;
+    border-style: solid;
+    background-color: transparent;
+    width: 100%;
+    border-bottom-color: #e1e1e1;
+    text-align: right;
+}
+
+.item .cell-quantity button {
+    position: absolute;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #868F9E;
+}
+
+.item .cell-quantity .plus-btn {
+    left: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.item .cell-quantity .minus-btn {
+    width: 26px;
+    height: 26px;
+}
+
+.item .cell-quantity {}
 
 
 /* TODO */
@@ -189,25 +262,8 @@
     color: #111111;
 }
 
-button[class*=btn] {
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
+button[class*=btn] {}
 
-.plus-btn {
-    color: #868F9E;
-}
-
-;
-.minus-btn {
-    color: #868F9E;
-}
-
-;
 button:focus,
 input:focus {
     outline: 0;
