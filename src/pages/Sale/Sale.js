@@ -154,10 +154,10 @@ const BillTab = (props) => {
                             <Remove style={{ width: 14, height: 14 }} />
                         </button>
                     </div>
-                    {/* <div className="price">
-                        <input type="text" name="name" />
+                    <div className="cell-change-price">
+                        <button>120.000</button>
                     </div>
-                    <div className="total-price">$549</div> */}
+                    <div className="cell-price">$549</div>
                 </div>
             </div>
 

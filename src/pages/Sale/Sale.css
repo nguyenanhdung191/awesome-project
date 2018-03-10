@@ -132,6 +132,7 @@
 }
 
 .item .row-product {
+    width: calc(100% - 70px);
     float: left;
     position: relative;
     padding-left: 120px;
@@ -139,6 +140,10 @@
 
 .item>.row-product {
     margin-top: 15px;
+}
+
+.item .cell-name {
+    width: calc(100% - 330px);
 }
 
 .item .cell-name h4 {
@@ -173,6 +178,7 @@
     border-style: solid;
     background-color: transparent;
     width: 100%;
+    padding-right: 5px;
     border-bottom-color: #e1e1e1;
     text-align: right;
 }
@@ -197,7 +203,34 @@
     height: 26px;
 }
 
-.item .cell-quantity {}
+.item .cell-change-price {
+    width: 100px;
+}
+
+.item .cell-change-price button {
+    width: 100%;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-bottom-color: #e1e1e1;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.item .cell-change-price .item .cell-quantity .item .cell-price {
+    text-align: right;
+    font-size: 14px;
+}
+
+.item .cell-price {
+    width: 115px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
 
 
 /* TODO */
@@ -267,15 +300,6 @@ button[class*=btn] {}
 button:focus,
 input:focus {
     outline: 0;
-}
-
-.total-price {
-    width: 83px;
-    padding-top: 27px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
 }
 
 @media (max-width: 800px) {
