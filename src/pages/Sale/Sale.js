@@ -3,26 +3,15 @@ import "./Sale.css";
 import PropTypes from "prop-types";
 import {
     Toolbar,
-    Typography,
     Grid,
     InputAdornment,
     IconButton,
-    TextField,
     Tabs, Tab,
-    Drawer,
-    Divider,
-    GridList, GridListTile,
-    List, ListItem, ListItemText, ListItemIcon,
     withStyles,
     colors
 } from "material-ui";
-import Subheader from "material-ui/List/ListSubheader";
 import {
-    Add, Remove,
-    ArrowDropUp, ArrowDropDown,
-    Clear,
-    Search,
-    KeyboardArrowDown, KeyboardArrowUp
+    Search, KeyboardArrowUp
 } from "material-ui-icons";
 import MenuIcon from "material-ui-icons/Menu";
 import Menu, { MenuItem } from "material-ui/Menu";
@@ -30,6 +19,7 @@ import FormControl from "material-ui/Form/FormControl";
 import Input from "material-ui/Input/Input";
 
 import Products from "./Products.js";
+import BillTab from "./BillTab.js";
 
 const styles = {
     root: {
@@ -128,43 +118,7 @@ class TopBar extends React.Component {
     }
 }
 
-const BillTab = (props) => {
-    return (
-        <div className="shopping-cart">
 
-
-
-            <div className="item">
-                <div className="cell-order">1</div>
-                <div className="cell-action"><Clear style={{ width: 14, height: 14 }} /></div>
-
-                <div className="row-product">
-
-                    <div className="cell-name">
-                        <h4>Common Projects Common Projects</h4>
-                        <div className="cell-code" title="SP000004">SP000004</div>
-                    </div>
-
-                    <div className="cell-quantity">
-                        <button className="plus-btn" type="button" name="button">
-                            <Add style={{ width: 14, height: 14 }} />
-                        </button>
-                        <input type="text" name="name" value="1" />
-                        <button className="minus-btn" type="button" name="button">
-                            <Remove style={{ width: 14, height: 14 }} />
-                        </button>
-                    </div>
-                    <div className="cell-change-price">
-                        <button>120.000</button>
-                    </div>
-                    <div className="cell-price">$549</div>
-                </div>
-            </div>
-
-
-        </div>
-    )
-}
 
 class LeftPager extends React.Component {
     constructor(props) {
@@ -192,10 +146,6 @@ class LeftPager extends React.Component {
             listBills: this.state.listBills
         }));
     }
-
-    // componentDidMount() {
-    //     this.textInput.focusTextInput();
-    // }
 
     render() {
         const { styles } = this.props;

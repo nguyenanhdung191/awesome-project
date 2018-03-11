@@ -1,0 +1,153 @@
+/* CART */
+
+.shopping-cart {
+    background-color: #ffffff;
+    transition: height 200ms ease-out;
+    padding: 10px 12px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    height: calc(100% - 300px);
+    ;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 4px;
+}
+
+.shopping-list {
+    box-sizing: border-box;
+}
+
+.item {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px;
+    font-size: 12px;
+    height: 50px;
+}
+
+.item:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.item .cell-order {
+    width: 35px;
+}
+
+.item .cell-action {
+    width: 35px;
+}
+
+.item .cell-action .btn-icon {
+    width: 35px;
+}
+
+.item>[class^="cell-"] {
+    padding: 15px 5px 0;
+    float: left;
+    text-align: center;
+}
+
+.item .row-product {
+    width: calc(100% - 70px);
+    float: left;
+    position: relative;
+    padding-left: 120px;
+}
+
+.item>.row-product {
+    margin-top: 15px;
+}
+
+.item .cell-name {
+    width: calc(100% - 330px);
+}
+
+.item .cell-name h4 {
+    font-size: 13px;
+    padding-bottom: 2px;
+    margin: 0;
+    color: #111111;
+    font-weight: normal;
+}
+
+.item .cell-code {
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.item>.row-product>[class^="cell-"] {
+    padding: 0 5px;
+    float: left;
+    min-height: 1px;
+}
+
+.item .cell-quantity {
+    width: 115px;
+    padding-left: 30px !important;
+    padding-right: 34px !important;
+    position: relative;
+}
+
+.item .cell-quantity input {
+    border-width: 0 0 1px;
+    border-style: solid;
+    background-color: transparent;
+    width: 100%;
+    padding-right: 5px;
+    border-bottom-color: #e1e1e1;
+    text-align: right;
+}
+
+.item .cell-quantity button {
+    position: absolute;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #868F9E;
+}
+
+.item .cell-quantity .plus-btn {
+    left: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.item .cell-quantity .minus-btn {
+    width: 26px;
+    height: 26px;
+}
+
+.item .cell-change-price {
+    width: 100px;
+}
+
+.item .cell-change-price button {
+    width: 100%;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-bottom-color: #e1e1e1;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.item .cell-change-price .item .cell-quantity .item .cell-price {
+    text-align: right;
+    font-size: 14px;
+}
+
+.item .cell-price {
+    width: 115px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: bolder;
+}
+
+.delete-btn,
+.like-btn {
+    display: inline-block;
+    Cursor: pointer;
+}

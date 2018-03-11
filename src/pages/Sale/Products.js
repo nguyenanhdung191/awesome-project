@@ -187,37 +187,7 @@ class Products extends React.Component {
                             <span className="product-name">Thịt heo lái A</span>
                         </div>
                     </div>
-                    
                 </div>
-
-
-
-                {/* <GridList
-                    cellHeight={180}
-                    className={classes.gridList}
-                    cols={2.8}
-                    spacing={1}
-                >
-                    <GridListTile key="Subheader" cols={2.8} style={{ height: "auto" }}>
-                        <div className="products-header">
-                            <IconButton onClick={this.handleDrawerToggle}>
-                                <KeyboardArrowDown />
-                            </IconButton>
-                            <Subheader>Danh mục</Subheader>
-                        </div>
-                    </GridListTile>
-
-                    {listProducts.map(tile => (
-                        <GridListTile key={tile.id} cols={0.4}>
-                            <div className="gallery">
-                                <img src={tile.img} alt={tile.title} />
-                                <div className="desc">
-                                    Add a description of the image here
-                  </div>
-                            </div>
-                        </GridListTile>
-                    ))}
-                </GridList> */}
             </Drawer>
         );
     }
